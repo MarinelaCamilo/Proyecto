@@ -12,7 +12,6 @@ namespace Proyecto.Logica.BL
 
 		public clsUsuarios()
 		{
-
 			clsConexion obclsConexion = new clsConexion();
 			stConexion = obclsConexion.getConexion();
 		}

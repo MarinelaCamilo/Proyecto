@@ -48,7 +48,7 @@
           </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="#">Registrar Cuenta</a>
-          <a class="d-block small" href="#">Olvidó Password?</a>
+          <a class="d-block small" href="../RecuperarPassword/RecuperarPassword.aspx">Olvidó Password?</a>
         </div>
       </div>
     </div>

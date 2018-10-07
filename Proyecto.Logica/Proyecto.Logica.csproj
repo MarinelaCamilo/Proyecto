@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\clsConexion.cs" />
+    <Compile Include="BL\ClsGeneral.cs" />
+    <Compile Include="BL\clsPosiblesClientes.cs" />
+    <Compile Include="BL\ClsRecuperarPassword.cs" />
     <Compile Include="BL\clsUsuarios.cs" />
+    <Compile Include="Models\ClsCorreo.cs" />
+    <Compile Include="Models\ClsPosiblesClientes.cs" />
     <Compile Include="Models\clsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
