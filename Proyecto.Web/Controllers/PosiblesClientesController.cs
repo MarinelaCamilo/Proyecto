@@ -14,7 +14,7 @@ namespace Proyecto.Web.Controllers
 
 			try
 			{
-				Logica.BL.clsPosiblesClientes obclsPosiblesClientes = new Logica.BL.clsPosiblesClientes();
+				Logica.BL.ClsPosiblesClientes obclsPosiblesClientes = new Logica.BL.ClsPosiblesClientes();
 				return obclsPosiblesClientes.getConsultarPosiblesClientes();
 
 			}
@@ -26,14 +26,15 @@ namespace Proyecto.Web.Controllers
 		/// <param name="obClsPosiblesClientesModels">Objeto</param>
 		/// <param name="inOpcion">Opción de Ejecución</param>
 		/// <returns>Mensaje de Proceso</returns>
-		public string setAdministarPosiblesClientesControllers(Logica.Models.ClsPosiblesClientes obClsPosiblesClientesModels,
+		public string setAdministrarPosiblesClientesControllers(Logica.Models.ClsPosiblesClientes obClsPosiblesClientesModels,
 			int inOpcion)
 		{
 			{
 				try
 				{
-					Logica.BL.clsPosiblesClientes obclsPosiblesClientes = new Logica.BL.clsPosiblesClientes();
-					return obclsPosiblesClientes.setAdministarPosiblesClientes(obClsPosiblesClientesModels, inOpcion);
+					Logica.BL.ClsPosiblesClientes obclsPosiblesClientes = new Logica.BL.ClsPosiblesClientes();
+					
+					return obclsPosiblesClientes.SetAdministrarPosiblesClientes(obClsPosiblesClientesModels, inOpcion);
 				}
 				catch (Exception ex) { throw ex; }
 

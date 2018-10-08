@@ -48,9 +48,6 @@ namespace Proyecto.Logica.BL
 
 		}
 
-		internal string setAdministarPosiblesClientes(Models.ClsPosiblesClientes obClsPosiblesClientesModels, int inOpcion)
-		{
-			throw new NotImplementedException();
-		}
+	
 	}
 }

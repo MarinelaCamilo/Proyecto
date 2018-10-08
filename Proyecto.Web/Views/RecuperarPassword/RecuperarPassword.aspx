@@ -33,7 +33,7 @@
 			  <div class="text-center mt-4 mb-5">
 				 <h4>Olvidó su password?</h4>
 				  <p>Ingrese su dirección de correo electrónico y nosotros te enviaremos las isntrucciones
-					 para la recuperación de su password.
+					 para que puedas recuperar tu password.
  			      </p>
 			  </div>
 			  <div class="form-group">

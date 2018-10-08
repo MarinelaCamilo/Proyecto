@@ -50,7 +50,7 @@ namespace Proyecto.Logica.BL
 		/// <param name="obclsPosiblesClientes">Objeto</param>
 		/// <param name="inOpcion">Opción de ejecución</param>
 		/// <returns>Mensaje de operación</returns>
-		public string SetAdministarPosiblesClientes(Models.ClsPosiblesClientes obclsPosiblesClientes, int inOpcion)
+		public string SetAdministrarPosiblesClientes(Models.ClsPosiblesClientes obclsPosiblesClientes, int inOpcion)
 		{
 			try
 			{			
@@ -86,6 +86,8 @@ namespace Proyecto.Logica.BL
 			catch (Exception ex) { throw ex; }
 			finally { _SqlConnection.Close(); }
 		}
+
+
 
 	}
 }
