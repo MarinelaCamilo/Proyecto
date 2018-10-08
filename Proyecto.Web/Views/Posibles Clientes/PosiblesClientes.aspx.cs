@@ -33,8 +33,13 @@ namespace Proyecto.Web.Views.Posibles_Clientes
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!IsPostBack)
-			   getPosiblesClientes();
-				
+			{
+				if (Session["sessionEmail"] == null)
+				Response.Redirect("../Login/Login.aspx");
+
+				getPosiblesClientes();
+			}
+			   				
 		}
 		protected void btnGuardar_Click(object sender, EventArgs e)
 		{

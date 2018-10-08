@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Web;
 
 namespace Proyecto.Web.Views.Login
 {
@@ -8,6 +10,12 @@ namespace Proyecto.Web.Views.Login
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			//La primera vez que carga la página
+			if (!IsPostBack)
+			{
+			 if (Request.Cookies["cookieEmail"] != null)
+				txtEmail.Text = Request.Cookies["cookieEmail"].Value.ToString();
+			}
 		//ctrl + k +c comentar
 		// ctrl + k + u comentar
 		//if(!IsPostBack)
@@ -37,13 +45,36 @@ namespace Proyecto.Web.Views.Login
 
 				};
 
-				//Instanciamos controlador 
+				//Instancio controlador 
 				Controllers.LoginController obLoginController = new Controllers.LoginController();
 				bool blBandera = obLoginController.getValidarUsuarioControllers(obclsUsuarios);
 
 				if (blBandera)
-					Response.Redirect("../Index/Index.aspx"); //Redireccionamos
+				{
+					Session["sessionEmail"] = txtEmail.Text;
+					if (chkRecordar.Checked)
 
+
+
+						if (chkRecordar.Checked)
+					{
+						//Creo un objeto Cookie
+						HttpCookie cookie = new HttpCookie("cookieEmail", txtEmail.Text);
+						//Agrego el tiempo de vida de la Cookie
+						cookie.Expires = DateTime.Now.AddDays(2);
+						//Agrego a la coleccion de Cookies
+						Response.Cookies.Add(cookie);
+					}
+					else
+					{
+						HttpCookie cookie = new HttpCookie("cookieEmail", txtEmail.Text);
+						//Expira el dia de anterior
+						cookie.Expires = DateTime.Now.AddDays(-1);
+						Response.Cookies.Add(cookie);
+					}
+					//Antaes del signo de pregunta es la ruta a la cual debe dirigierse, luego del signo pregunta qué es lo que voy a enviar a través de la URL
+					Response.Redirect("../Index/Index.aspx?stEmail=" + txtEmail.Text);//Redireccionamos
+				}
 				else
 					throw new Exception("Usuario o password incorrectos");
 			}

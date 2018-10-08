@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proyecto.Logica.Models
+﻿namespace Proyecto.Logica.Models
 {
 	public class clsTareas
 	{
@@ -16,7 +10,7 @@ namespace Proyecto.Logica.Models
 		public string stCuenta { get; set; }
 		public clsEstadoTareas clsEstadoTareas { get; set; }
 		public clsPrioridad clsPrioridad { get; set; }
-		public Char chEnviarMensaje { get; set; }
+		public char chEnviarMensaje { get; set; }
 		public char chRepetir { get; set; }
 		public string stDescripcion { get; set; }
 	}
